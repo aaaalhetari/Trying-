@@ -17,7 +17,31 @@
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 html,body{margin:0;padding:0}
 body{background:var(--bg);color:var(--ink);font-family:"IBM Plex Sans Arabic",system-ui,sans-serif;
-  font-size:15px;line-height:1.6;padding-inline-start:var(--rail);padding-bottom:44px}
+  font-size:15px;line-height:1.6;padding-bottom:44px}
+h1,h2,.dsp{font-family:"Almarai",system-ui,sans-serif;font-weight:800}
+img{display:block;max-width:100%}
+.ti{line-height:1}
+
+/* ---------- side rail: same background as the page ---------- */
+ml lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>الأنعام</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Almarai:wght@400;700;800&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3/dist/tabler-icons.min.css" rel="stylesheet">
+<style>
+:root{
+  --bg:#F4F2ED; --surf:#FFFFFF; --ink:#15171A; --mut:#6F6C66; --faint:#9C9890;
+  --line:rgba(21,23,26,.09); --line2:rgba(21,23,26,.18);
+  --red:#8E1C2B; --red-s:#F7E9EB; --gold:#B08D3F; --rail:56px;
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:"IBM Plex Sans Arabic",system-ui,sans-serif;
+  font-size:15px;line-height:1.6;padding-bottom:44px}
 h1,h2,.dsp{font-family:"Almarai",system-ui,sans-serif;font-weight:800}
 img{display:block;max-width:100%}
 .ti{line-height:1}
@@ -39,7 +63,7 @@ img{display:block;max-width:100%}
 .topbar{position:sticky;top:0;z-index:40;background:var(--bg);will-change:transform}
 .brand{position:relative;z-index:1}
 .orow{position:relative;z-index:2;background:var(--bg)}
-.brand{display:flex;align-items:center;gap:11px;padding:14px 15px 10px 15px;padding-inline-start:8px}
+.brand{display:flex;align-items:center;gap:11px;padding:14px 15px 10px}
 .mark{width:42px;height:42px;flex:0 0 42px;border-radius:13px;background:var(--surf);border:1px solid var(--line);
   display:flex;align-items:center;justify-content:center;overflow:hidden}
 .mark img{width:100%;height:100%;object-fit:contain;padding:3px}
@@ -50,7 +74,7 @@ img{display:block;max-width:100%}
 .lang{padding:0 13px;font-size:12.5px;font-weight:500}
 .prof{width:38px;flex:0 0 38px;font-size:19px}
 .orow{display:flex;align-items:center;gap:7px;overflow-x:auto;-webkit-overflow-scrolling:touch;
-  overscroll-behavior-x:contain;padding:12px 15px 14px;padding-inline-start:8px;scrollbar-width:none}
+  overscroll-behavior-x:contain;padding:12px 15px 10px;scrollbar-width:none}
 .orow::-webkit-scrollbar{display:none}
 .org{flex:0 0 auto;display:flex;align-items:center;gap:6px;padding:7px 12px;border-radius:999px;
   background:var(--bg);border:1px solid var(--line2);font-size:13px;color:var(--faint);white-space:nowrap;
@@ -61,18 +85,30 @@ img{display:block;max-width:100%}
 .org.on{background:var(--red);border-color:var(--red);color:#fff}
 .org.on .n{color:rgba(255,255,255,.72)}
 
-.hero{position:relative;margin:14px 15px 0 15px;margin-inline-start:8px;border-radius:20px;overflow:hidden;height:172px;background:#2A1F1C}
-.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.74}
-.hero .hov{position:relative;height:100%;display:flex;flex-direction:column;justify-content:flex-end;
-  padding:17px;background:linear-gradient(to top,rgba(12,10,9,.85),rgba(12,10,9,.12) 62%,transparent)}
-.hero .eyebrow{font-size:11px;letter-spacing:.12em;color:#E8D9B4}
-.hero h2{color:#fff;font-size:21px;margin:3px 0 4px;line-height:1.3}
-.hero p{color:rgba(255,255,255,.82);font-size:12.5px;margin:0}
-.trust{display:flex;gap:16px;justify-content:center;padding:14px 15px 2px;flex-wrap:wrap}
-.tr{display:flex;align-items:center;gap:6px;font-size:11.5px;color:var(--mut)}
-.tr .ti{font-size:16px;color:var(--red)}
-
-main{padding-inline-start:8px;padding-inline-end:15px}
+.cats{padding:0 15px 9px;background:var(--bg)}
+.crow{display:flex;gap:9px;overflow-x:auto;scrollbar-width:none;padding:4px 0;overscroll-behavior-x:contain}
+.crow::-webkit-scrollbar{display:none}
+.cchip{position:relative;flex:0 0 auto;width:70px;height:70px;border-radius:999px;overflow:hidden;
+  display:flex;align-items:center;justify-content:center;cursor:pointer;user-select:none;background:#E4DCD0;
+  transition:width .32s cubic-bezier(.32,.72,.3,1),height .32s cubic-bezier(.32,.72,.3,1),
+             padding .32s cubic-bezier(.32,.72,.3,1)}
+.cchip .cav{position:absolute;inset:0}
+.cchip .cav img,.cchip .cav svg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.cchip .scrim{position:absolute;inset:0;border-radius:999px;background:linear-gradient(to top,rgba(18,15,13,.74),rgba(18,15,13,.30))}
+.clab{position:relative;z-index:2;font-family:"Almarai";font-weight:700;font-size:11px;color:#fff;
+  text-align:center;line-height:1.25;padding:0 6px;text-shadow:0 1px 4px rgba(0,0,0,.55);
+  display:flex;align-items:center;justify-content:center;gap:4px;white-space:nowrap;
+  transition:font-size .32s cubic-bezier(.32,.72,.3,1)}
+.flagav{background:#EDE6DB}
+.flagav .femoji{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:44px;line-height:1}
+.cchip.on{outline:3px solid var(--red);outline-offset:-3px;background:var(--surf)}
+.cchip.on .cav,.cchip.on .scrim{inset:5px;border-radius:999px;overflow:hidden}
+.cchip.on .scrim{background:linear-gradient(to top,rgba(142,28,43,.88),rgba(142,28,43,.5))}
+.cchip.off{opacity:.35}
+.cats.compact .cchip{width:auto;height:36px;padding:0 15px;border-radius:999px}
+.cats.compact .clab{font-size:12.5px}
+.cats.compact .crow{padding:3px 0;gap:7px}
+main{padding:14px 15px 0}
 .secwrap{position:relative;padding-top:42px}
 .secwrap:first-child{padding-top:8px}
 .sec{display:flex;align-items:center;gap:10px;padding:0 0 14px}
@@ -86,7 +122,7 @@ main{padding-inline-start:8px;padding-inline-end:15px}
   contain:layout paint style;transition:border-color .18s}
 .pcard.has{border-color:var(--red);outline:1.5px solid var(--red);outline-offset:-1.5px}
 .pimg{position:relative;width:100%;aspect-ratio:2/1;background:#E4DCD0;display:flex;align-items:center;justify-content:center;color:#B0A899}
-.pimg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.pimg img,.pimg .art{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .pimg .ic{width:42px;height:42px;opacity:.7}
 .pimg .cnt2{position:absolute;top:10px;inset-inline-start:10px;min-width:23px;height:23px;border-radius:12px;
   background:var(--red);color:#fff;font-size:12px;font-weight:600;display:flex;align-items:center;
@@ -102,6 +138,11 @@ main{padding-inline-start:8px;padding-inline-end:15px}
 .prow{display:flex;align-items:flex-end;justify-content:space-between;gap:12px}
 .pprice{text-align:end}
 .pnm{font-family:"Almarai";font-weight:700;font-size:15.5px;line-height:1.3;margin:0 0 6px}
+.ptags{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 9px}
+.ptag{display:inline-flex;align-items:center;gap:5px;font-size:10.5px;color:var(--mut);background:var(--bg);
+  border:1px solid var(--line);border-radius:999px;padding:3px 9px;white-space:nowrap;line-height:1.5}
+.ptag .ti{font-size:12px;color:var(--red)}
+.ptag .fl{font-size:12px}
 .pmeta{display:flex;align-items:center;gap:9px;font-size:12px;color:var(--faint);flex-wrap:wrap}
 .pmeta .st{color:var(--gold);display:inline-flex;align-items:center;gap:2px}
 .pprice .lb{display:block;font-size:10px;color:var(--faint);line-height:1.1}
@@ -109,7 +150,7 @@ main{padding-inline-start:8px;padding-inline-end:15px}
 .pprice .c{font-size:10.5px;color:var(--mut)}
 .pcard.has .pprice .lb{color:var(--red)}
 
-footer{margin:30px 15px 0;margin-inline-start:8px;background:var(--surf);border:1px solid var(--line);border-radius:20px;padding:20px 17px}
+footer{margin:30px 15px 0;background:var(--surf);border:1px solid var(--line);border-radius:20px;padding:20px 17px}
 footer .fl1{font-family:"Almarai";font-weight:800;font-size:15px;margin-bottom:3px}
 footer p{margin:0 0 3px;font-size:12.5px;color:var(--mut)}
 footer .row{display:flex;align-items:center;gap:9px;margin-top:14px;flex-wrap:wrap}
@@ -153,7 +194,7 @@ body.locked{position:fixed;width:100%;overflow:hidden}
 .pad{padding:0 15px 12px}
 .grab{width:40px;height:4px;border-radius:2px;background:var(--line2);margin:9px auto 0}
 .dhero{position:relative;height:172px;background:#E4DCD0;margin-bottom:-18px}
-.dhero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.dhero img,.dhero .art{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .dhero .x{position:absolute;top:12px;inset-inline-end:12px;width:34px;height:34px;border-radius:50%;
   background:rgba(255,255,255,.94);display:flex;align-items:center;justify-content:center;font-size:18px;cursor:pointer}
 .dbody{position:relative;background:var(--bg);border-radius:22px 22px 0 0;padding:16px 16px calc(18px + env(safe-area-inset-bottom))}
@@ -219,8 +260,8 @@ body.locked{position:fixed;width:100%;overflow:hidden}
 .selall .ti{font-size:14px}
 .gcard{background:var(--surf);border:1px solid var(--line);border-radius:17px;padding:13px;margin-bottom:11px}
 .ghead{display:flex;align-items:center;gap:11px;margin-bottom:2px;cursor:pointer}
-.gth{width:52px;height:52px;flex:0 0 52px;border-radius:13px;overflow:hidden;background:#E4DCD0}
-.gth img{width:100%;height:100%;object-fit:cover}
+.gth{position:relative;width:52px;height:52px;flex:0 0 52px;border-radius:13px;overflow:hidden;background:#E4DCD0}
+.gth img,.gth .art,.uth img,.uth .art{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
 .gnm{font-family:"Almarai";font-weight:700;font-size:14.5px;line-height:1.35;word-break:break-word}
 .gsub{font-size:11px;color:var(--mut);line-height:1.45;word-break:break-word}
 .gcard .lines{background:transparent;border:0;border-radius:0;padding:0;border-top:1px dashed var(--line2);margin-top:8px}
@@ -293,8 +334,8 @@ body.locked{position:fixed;width:100%;overflow:hidden}
   scroll-snap-align:start;contain:layout paint style;transition:border-color .15s}
 .uitem.on{border-color:var(--red);outline:1.5px solid var(--red);outline-offset:-1.5px}
 .uhead{display:flex;align-items:flex-start;gap:9px;min-width:0}
-.uth{width:44px;height:44px;flex:0 0 44px;border-radius:12px;overflow:hidden;background:#E4DCD0}
-.uth img{width:100%;height:100%;object-fit:cover}
+.uth{position:relative;width:44px;height:44px;flex:0 0 44px;border-radius:12px;overflow:hidden;background:#E4DCD0}
+
 .unm{display:block;font-family:"Almarai";font-weight:700;font-size:13px;line-height:1.35;word-break:break-word}
 .uopt{display:block;font-size:11px;color:var(--mut);word-break:break-word}
 .udel{border:0;background:var(--bg);color:var(--faint);width:26px;height:26px;border-radius:50%;
@@ -386,7 +427,6 @@ body.locked{position:fixed;width:100%;overflow:hidden}
 </head>
 <body>
 
-<nav class="rail" id="rail"></nav>
 
 <header class="topbar" id="topbar">
 <div class="brand" id="brandbar">
@@ -395,14 +435,8 @@ body.locked{position:fixed;width:100%;overflow:hidden}
   <div class="hbtn lang" id="langBtn" role="button">English</div>
   <div class="hbtn prof" role="button" aria-label="Profile"><i class="ti ti-user"></i></div>
 </div>
-<div class="orow" id="origins"></div>
+<div class="cats" id="filters"></div>
 </header>
-
-<section class="hero">
-  <img id="heroImg" alt="" onerror="this.remove()">
-  <div class="hov"><span class="eyebrow" id="hEye"></span><h2 id="hTitle"></h2><p id="hSub"></p></div>
-</section>
-<div class="trust" id="trust"></div>
 
 <main id="main"></main>
 
@@ -455,6 +489,7 @@ var IMG={
  logo:"https://shop.alanaam.qa/_next/static/media/logo.b56b197a.png",
  h1:B+"image1.5fd7e6bf.jpg"+D1, h2:B+"image2.5d542b2f.jpg"+D1,
  h3:B+"image3.9be7aae6.jpg"+D1, h4:B+"image4.a7c6462b.jpg"+D1,
+ origin:B+"shopByOrigin.7460ae91.jpeg"+D1,
  visa:B+"visa.edfd2ddb.png"+D2, mc:B+"masterCard.0e6f7560.png"+D2
 };
 
@@ -503,13 +538,26 @@ var T={
 };
 
 var ORIGINS=[
- {id:"qa",f:"🇶🇦",ar:"قطر",en:"Qatar"},{id:"sa",f:"🇸🇦",ar:"السعودية",en:"Saudi Arabia"},
- {id:"sd",f:"🇸🇩",ar:"السودان",en:"Sudan"},{id:"so",f:"🇸🇴",ar:"الصومال",en:"Somalia"},
- {id:"sy",f:"🇸🇾",ar:"سوريا",en:"Syria"},{id:"au",f:"🇦🇺",ar:"أستراليا",en:"Australia"},
- {id:"br",f:"🇧🇷",ar:"البرازيل",en:"Brazil"},{id:"in",f:"🇮🇳",ar:"الهند",en:"India"},
- {id:"fr",f:"🇫🇷",ar:"فرنسا",en:"France"}
+ {id:"qa",cc:"qa",f:"🇶🇦",ar:"قطر",en:"Qatar"},{id:"sa",cc:"sa",f:"🇸🇦",ar:"السعودية",en:"Saudi Arabia"},
+ {id:"sd",cc:"sd",f:"🇸🇩",ar:"السودان",en:"Sudan"},{id:"so",cc:"so",f:"🇸🇴",ar:"الصومال",en:"Somalia"},
+ {id:"sy",cc:"sy",f:"🇸🇾",ar:"سوريا",en:"Syria"},{id:"au",cc:"au",f:"🇦🇺",ar:"أستراليا",en:"Australia"},
+ {id:"br",cc:"br",f:"🇧🇷",ar:"البرازيل",en:"Brazil"},{id:"in",cc:"in",f:"🇮🇳",ar:"الهند",en:"India"},
+ {id:"fr",cc:"fr",f:"🇫🇷",ar:"فرنسا",en:"France"}
 ];
 
+var STATES=[
+ {id:'fresh',ic:'ti-leaf',ar:'طازج',en:'Fresh'},
+ {id:'butcher',ic:'ti-tools-kitchen-2',ar:'ملحمة',en:'Butcher'},
+ {id:'chilled',ic:'ti-cube',ar:'مبرّد',en:'Chilled'},
+ {id:'frozen',ic:'ti-snowflake',ar:'مجمّد',en:'Frozen'}
+];
+var ANIMALS=[
+ {id:'sheep',art:'sheep',ar:'ضأن',en:'Sheep'},
+ {id:'goat',art:'goat',ar:'ماعز',en:'Goat'},
+ {id:'camel',art:'camel',ar:'إبل',en:'Camel'},
+ {id:'cattle',art:'steak',ar:'أبقار',en:'Cattle'},
+ {id:'poultry',art:'chickenWhole',ar:'دواجن',en:'Poultry'}
+];
 var PREP={
  carcass:[{ar:"كامل",en:"Whole",x:0},{ar:"مقطّع",en:"Cut up",x:10},{ar:"صالونة ١٠٠غ",en:"Saloona 100g",x:25},{ar:"مفروم",en:"Minced",x:20}],
  sadaqa:[{ar:"توزيع على الأسر",en:"Distribute to families",x:0},{ar:"تسليم لي",en:"Deliver to me",x:0},{ar:"مقطّع",en:"Cut up",x:10},{ar:"صالونة ١٠٠غ",en:"Saloona 100g",x:25}],
@@ -537,47 +585,141 @@ function W(l,r){return l.map(function(w){return{w:w,p:Math.round(w*r)};});}
 function KG(l,r){return l.map(function(w){return{w:w,p:+(w*r).toFixed(2)};});}
 
 var P=[
- {id:31,c:"deal",o:"au",ar:"عرض الكتف الأسترالي",en:"Australian shoulder deal",tar:"خصم ٢٠٪",ten:"20% off",r:4.8,rate:38,opts:KG([2,3,5,7,10],38)},
- {id:32,c:"deal",o:"qa",ar:"عرض الدجاج الطازج",en:"Fresh chicken deal",tar:"خصم ١٥٪",ten:"15% off",r:4.6,rate:13.6,opts:KG([3,5,8,12],13.6)},
- {id:1,c:"carcass",o:"sa",ar:"خروف نعيمي حي",en:"Naeemi lamb, live",tar:"مميّز",ten:"Premium",r:4.9,rate:62,opts:W([16.4,17.1,17.8,18.3,19.2,19.9,20.6,21.4,22.3,23.7,25.1],62)},
- {id:2,c:"carcass",o:"sd",ar:"خروف سواكني",en:"Sawakni lamb",r:4.7,rate:54,opts:W([15.2,15.9,16.7,17.4,18.1,18.8,19.6,20.9,22.2],54)},
- {id:3,c:"carcass",o:"so",ar:"خروف حري",en:"Harri lamb",r:4.5,rate:48,opts:W([13.6,14.3,15.1,15.8,16.5,17.2,18.4,19.7],48)},
- {id:4,c:"carcass",o:"au",ar:"خروف أسترالي",en:"Australian lamb",r:4.3,rate:41,opts:W([18.2,19.4,20.3,21.1,22.6,23.9,25.4],41)},
- {id:5,c:"carcass",o:"sy",ar:"ماعز شامي",en:"Shami goat",r:4.6,rate:58,opts:W([14.7,15.5,16.2,17.3,18.1,19.4,20.8],58)},
- {id:6,c:"carcass",o:"qa",ar:"ماعز محلي",en:"Local goat",tar:"محلي",ten:"Local",r:4.9,rate:71,opts:W([12.9,13.6,14.4,15.2,16.1,17.5],71)},
- {id:7,c:"aqiqa",o:"sa",ar:"عقيقة نعيمي",en:"Naeemi aqiqah",r:4.8,rate:62,opts:W([16.8,17.5,18.4,19.3,20.2,21.6],62)},
- {id:8,c:"aqiqa",o:"so",ar:"عقيقة حري",en:"Harri aqiqah",r:4.4,rate:48,opts:W([13.9,14.6,15.4,16.3,17.1,18.5],48)},
- {id:9,c:"udhiya",o:"sa",ar:"أضحية نعيمي",en:"Naeemi udhiyah",tar:"موسمي",ten:"Seasonal",r:4.9,rate:64,opts:W([17.2,18.1,19.4,20.5,21.7,23.2],64)},
- {id:10,c:"udhiya",o:"au",ar:"أضحية أسترالي",en:"Australian udhiyah",r:4.2,rate:42,opts:W([19.1,20.4,21.8,23.1,24.6],42)},
- {id:11,c:"sadaqa",o:"sd",ar:"صدقة خروف سواكني",en:"Sawakni charity lamb",r:4.7,rate:54,opts:W([15.4,16.2,17.1,18.3,19.5],54)},
- {id:12,c:"sadaqa",o:"so",ar:"نذر خروف حري",en:"Harri vow lamb",r:4.5,rate:48,opts:W([13.7,14.5,15.6,16.8,17.9],48)},
- {id:13,c:"walima",o:"qa",ar:"ذبيحة وليمة مع الأرز",en:"Banquet lamb with rice",r:4.8,sar:"شاملة التجهيز",sen:"Preparation included",
+ {id:31,an:"sheep",sv:"chilled",c:"deal",o:"au",ar:"عرض الكتف الأسترالي",en:"Australian shoulder deal",tar:"خصم ٢٠٪",ten:"20% off",r:4.8,rate:38,opts:KG([2,3,5,7,10],38)},
+ {id:32,an:"poultry",sv:"fresh",c:"deal",o:"qa",ar:"عرض الدجاج الطازج",en:"Fresh chicken deal",tar:"خصم ١٥٪",ten:"15% off",r:4.6,rate:13.6,opts:KG([3,5,8,12],13.6)},
+ {id:1,an:"sheep",sv:"fresh",c:"carcass",o:"sa",ar:"خروف نعيمي حي",en:"Naeemi lamb, live",tar:"مميّز",ten:"Premium",r:4.9,rate:62,opts:W([16.4,17.1,17.8,18.3,19.2,19.9,20.6,21.4,22.3,23.7,25.1],62)},
+ {id:2,an:"sheep",sv:"fresh",c:"carcass",o:"sd",ar:"خروف سواكني",en:"Sawakni lamb",r:4.7,rate:54,opts:W([15.2,15.9,16.7,17.4,18.1,18.8,19.6,20.9,22.2],54)},
+ {id:3,an:"sheep",sv:"fresh",c:"carcass",o:"so",ar:"خروف حري",en:"Harri lamb",r:4.5,rate:48,opts:W([13.6,14.3,15.1,15.8,16.5,17.2,18.4,19.7],48)},
+ {id:4,an:"sheep",sv:"chilled",c:"carcass",o:"au",ar:"خروف أسترالي",en:"Australian lamb",r:4.3,rate:41,opts:W([18.2,19.4,20.3,21.1,22.6,23.9,25.4],41)},
+ {id:5,an:"goat",sv:"fresh",c:"carcass",o:"sy",ar:"ماعز شامي",en:"Shami goat",r:4.6,rate:58,opts:W([14.7,15.5,16.2,17.3,18.1,19.4,20.8],58)},
+ {id:6,an:"goat",sv:"fresh",c:"carcass",o:"qa",ar:"ماعز محلي",en:"Local goat",tar:"محلي",ten:"Local",r:4.9,rate:71,opts:W([12.9,13.6,14.4,15.2,16.1,17.5],71)},
+ {id:7,an:"sheep",sv:"fresh",c:"aqiqa",o:"sa",ar:"عقيقة نعيمي",en:"Naeemi aqiqah",r:4.8,rate:62,opts:W([16.8,17.5,18.4,19.3,20.2,21.6],62)},
+ {id:8,an:"sheep",sv:"fresh",c:"aqiqa",o:"so",ar:"عقيقة حري",en:"Harri aqiqah",r:4.4,rate:48,opts:W([13.9,14.6,15.4,16.3,17.1,18.5],48)},
+ {id:9,an:"sheep",sv:"fresh",c:"udhiya",o:"sa",ar:"أضحية نعيمي",en:"Naeemi udhiyah",tar:"موسمي",ten:"Seasonal",r:4.9,rate:64,opts:W([17.2,18.1,19.4,20.5,21.7,23.2],64)},
+ {id:10,an:"sheep",sv:"chilled",c:"udhiya",o:"au",ar:"أضحية أسترالي",en:"Australian udhiyah",r:4.2,rate:42,opts:W([19.1,20.4,21.8,23.1,24.6],42)},
+ {id:11,an:"sheep",sv:"fresh",c:"sadaqa",o:"sd",ar:"صدقة خروف سواكني",en:"Sawakni charity lamb",r:4.7,rate:54,opts:W([15.4,16.2,17.1,18.3,19.5],54)},
+ {id:12,an:"sheep",sv:"fresh",c:"sadaqa",o:"so",ar:"نذر خروف حري",en:"Harri vow lamb",r:4.5,rate:48,opts:W([13.7,14.5,15.6,16.8,17.9],48)},
+ {id:13,an:"sheep",sv:"butcher",c:"walima",o:"qa",ar:"ذبيحة وليمة مع الأرز",en:"Banquet lamb with rice",r:4.8,sar:"شاملة التجهيز",sen:"Preparation included",
   opts:[{ar:"وليمة ١٠ أشخاص",en:"Banquet for 10",p:1150},{ar:"وليمة ٢٠ شخص",en:"Banquet for 20",p:2050},{ar:"وليمة ٣٠ شخص",en:"Banquet for 30",p:2950},{ar:"وليمة ٥٠ شخص",en:"Banquet for 50",p:4700}]},
- {id:14,c:"walima",o:"sa",ar:"وليمة نعيمي فاخرة",en:"Premium Naeemi banquet",tar:"مميّز",ten:"Premium",r:5,sar:"شاملة التجهيز",sen:"Preparation included",
+ {id:14,an:"sheep",sv:"butcher",c:"walima",o:"sa",ar:"وليمة نعيمي فاخرة",en:"Premium Naeemi banquet",tar:"مميّز",ten:"Premium",r:5,sar:"شاملة التجهيز",sen:"Preparation included",
   opts:[{ar:"وليمة ١٥ شخص",en:"Banquet for 15",p:2400},{ar:"وليمة ٢٥ شخص",en:"Banquet for 25",p:3800},{ar:"وليمة ٤٠ شخص",en:"Banquet for 40",p:5900}]},
- {id:15,c:"lamb",o:"sa",ar:"ريش غنم نعيمي",en:"Naeemi lamb chops",tar:"مميّز",ten:"Premium",r:4.9,rate:78,opts:KG([0.5,1,1.5,2,3,4,5,7,10],78)},
- {id:16,c:"lamb",o:"sd",ar:"فخذ غنم سواكني",en:"Sawakni lamb leg",r:4.6,rate:62,opts:KG([1,1.5,2,3,4,5,7,10],62)},
- {id:17,c:"lamb",o:"au",ar:"كتف غنم أسترالي",en:"Australian lamb shoulder",r:4.4,rate:48,opts:KG([1,1.5,2,3,5,7,10],48)},
- {id:18,c:"beef",o:"br",ar:"تندرلوين بقري",en:"Beef tenderloin",r:4.7,rate:95,opts:KG([0.5,1,1.5,2,3,5],95)},
- {id:19,c:"beef",o:"au",ar:"ريب آي أسترالي",en:"Australian ribeye",tar:"مميّز",ten:"Premium",r:4.9,rate:110,opts:KG([0.5,1,1.5,2,3,5],110)},
- {id:20,c:"beef",o:"in",ar:"قطع بقري",en:"Beef cuts",r:4.1,rate:38,opts:KG([1,2,3,5,7,10],38)},
- {id:21,c:"camel",o:"qa",ar:"لحم جمل طازج",en:"Fresh camel meat",tar:"محلي",ten:"Local",r:4.8,rate:52,opts:KG([1,1.5,2,3,5,7,10],52)},
- {id:22,c:"camel",o:"sd",ar:"سنام جمل",en:"Camel hump",r:4.5,rate:68,opts:KG([0.5,1,1.5,2,3],68)},
- {id:23,c:"bird",o:"qa",ar:"دجاج طازج كامل",en:"Fresh whole chicken",tar:"محلي",ten:"Local",r:4.7,rate:16,opts:KG([1,1.5,2,3,5,8,12],16)},
- {id:24,c:"bird",o:"br",ar:"صدور دجاج",en:"Chicken breast",r:4.3,rate:24,opts:KG([1,1.5,2,3,5,8],24)},
- {id:25,c:"bird",o:"fr",ar:"ديك رومي",en:"Turkey",r:4.5,rate:39,opts:KG([2,3,4,5,7],39)},
- {id:26,c:"mince",o:"qa",ar:"مفروم ضأن طازج",en:"Fresh lamb mince",r:4.8,rate:55,opts:KG([0.5,1,1.5,2,3,5],55)},
- {id:27,c:"mince",o:"in",ar:"مفروم بقري",en:"Beef mince",r:4.2,rate:38,opts:KG([0.5,1,2,3,5],38)},
- {id:28,c:"mince",o:"qa",ar:"كباب مشكّل جاهز",en:"Mixed kebab, ready",r:4.6,rate:62,opts:KG([0.5,1,1.5,2,3],62)},
- {id:29,c:"supply",o:"qa",ar:"صندوق العائلة",en:"Family box",r:4.7,sar:"تشكيلة مختارة",sen:"Selected assortment",
+ {id:15,an:"sheep",sv:"butcher",c:"lamb",o:"sa",ar:"ريش غنم نعيمي",en:"Naeemi lamb chops",tar:"مميّز",ten:"Premium",r:4.9,rate:78,opts:KG([0.5,1,1.5,2,3,4,5,7,10],78)},
+ {id:16,an:"sheep",sv:"butcher",c:"lamb",o:"sd",ar:"فخذ غنم سواكني",en:"Sawakni lamb leg",r:4.6,rate:62,opts:KG([1,1.5,2,3,4,5,7,10],62)},
+ {id:17,an:"sheep",sv:"chilled",c:"lamb",o:"au",ar:"كتف غنم أسترالي",en:"Australian lamb shoulder",r:4.4,rate:48,opts:KG([1,1.5,2,3,5,7,10],48)},
+ {id:18,an:"cattle",sv:"chilled",c:"beef",o:"br",ar:"تندرلوين بقري",en:"Beef tenderloin",r:4.7,rate:95,opts:KG([0.5,1,1.5,2,3,5],95)},
+ {id:19,an:"cattle",sv:"chilled",c:"beef",o:"au",ar:"ريب آي أسترالي",en:"Australian ribeye",tar:"مميّز",ten:"Premium",r:4.9,rate:110,opts:KG([0.5,1,1.5,2,3,5],110)},
+ {id:20,an:"cattle",sv:"frozen",c:"beef",o:"in",ar:"قطع بقري",en:"Beef cuts",r:4.1,rate:38,opts:KG([1,2,3,5,7,10],38)},
+ {id:21,an:"camel",sv:"fresh",c:"camel",o:"qa",ar:"لحم جمل طازج",en:"Fresh camel meat",tar:"محلي",ten:"Local",r:4.8,rate:52,opts:KG([1,1.5,2,3,5,7,10],52)},
+ {id:22,an:"camel",sv:"fresh",c:"camel",o:"sd",ar:"سنام جمل",en:"Camel hump",r:4.5,rate:68,opts:KG([0.5,1,1.5,2,3],68)},
+ {id:23,an:"poultry",sv:"fresh",c:"bird",o:"qa",ar:"دجاج طازج كامل",en:"Fresh whole chicken",tar:"محلي",ten:"Local",r:4.7,rate:16,opts:KG([1,1.5,2,3,5,8,12],16)},
+ {id:24,an:"poultry",sv:"frozen",c:"bird",o:"br",ar:"صدور دجاج",en:"Chicken breast",r:4.3,rate:24,opts:KG([1,1.5,2,3,5,8],24)},
+ {id:25,an:"poultry",sv:"frozen",c:"bird",o:"fr",ar:"ديك رومي",en:"Turkey",r:4.5,rate:39,opts:KG([2,3,4,5,7],39)},
+ {id:26,an:"sheep",sv:"butcher",c:"mince",o:"qa",ar:"مفروم ضأن طازج",en:"Fresh lamb mince",r:4.8,rate:55,opts:KG([0.5,1,1.5,2,3,5],55)},
+ {id:27,an:"cattle",sv:"frozen",c:"mince",o:"in",ar:"مفروم بقري",en:"Beef mince",r:4.2,rate:38,opts:KG([0.5,1,2,3,5],38)},
+ {id:28,an:"sheep",sv:"butcher",c:"mince",o:"qa",ar:"كباب مشكّل جاهز",en:"Mixed kebab, ready",r:4.6,rate:62,opts:KG([0.5,1,1.5,2,3],62)},
+ {id:29,an:"sheep",sv:"butcher",c:"supply",o:"qa",ar:"صندوق العائلة",en:"Family box",r:4.7,sar:"تشكيلة مختارة",sen:"Selected assortment",
   opts:[{ar:"صغير ٥ كغ",en:"Small 5 kg",p:480},{ar:"وسط ٩ كغ",en:"Medium 9 kg",p:790},{ar:"كبير ١٥ كغ",en:"Large 15 kg",p:1240}]},
- {id:30,c:"supply",o:"sd",ar:"ذبيحة مقطّعة جاهزة",en:"Ready-cut carcass",r:4.5,sar:"مغلّفة ومجمّدة",sen:"Packed and frozen",
+ {id:30,an:"sheep",sv:"frozen",c:"supply",o:"sd",ar:"ذبيحة مقطّعة جاهزة",en:"Ready-cut carcass",r:4.5,sar:"مغلّفة ومجمّدة",sen:"Packed and frozen",
   opts:[{ar:"نصف ذبيحة",en:"Half carcass",p:690},{ar:"ذبيحة كاملة",en:"Whole carcass",p:1350},{ar:"ذبيحتان",en:"Two carcasses",p:2620}]}
 ];
 
-var main=document.getElementById('main'), railEl=document.getElementById('rail'), orgEl=document.getElementById('origins');
+
+var ART={
+ chops:'<g transform="translate(100,66)">'+[-44,0,44].map(function(x){return '<g transform="translate('+x+',0)">'
+   +'<rect x="-4" y="-32" width="8" height="28" rx="4" fill="#F1EAE1"/><circle cx="0" cy="-32" r="7" fill="#F1EAE1"/>'
+   +'<ellipse cx="0" cy="6" rx="25" ry="19" fill="#A83744"/><ellipse cx="-7" cy="3" rx="11" ry="8" fill="#C9636E"/></g>';}).join('')+'</g>',
+ leg:'<path d="M60 80c-11-17-6-40 11-52 17-12 42-14 56-2 15 13 14 36 1 48-15 15-42 20-60 12z" fill="#A83744"/>'
+   +'<path d="M78 62c9-12 23-18 35-16" stroke="#C9636E" stroke-width="8" stroke-linecap="round" fill="none"/>'
+   +'<rect x="118" y="22" width="11" height="28" rx="5" fill="#F1EAE1" transform="rotate(22 123 36)"/><circle cx="132" cy="24" r="9" fill="#F1EAE1"/>',
+ shoulder:'<path d="M54 72c-7-22 8-40 32-45 26-5 51 5 59 22 8 17-2 36-21 43-24 8-62 4-70-20z" fill="#8E1C2B"/>'
+   +'<path d="M74 58c11-7 24-9 35-5M80 74c13-5 26-5 37 0M92 90c9-3 18-3 26 0" stroke="#C9636E" stroke-width="5" stroke-linecap="round" fill="none"/>',
+ steak:'<path d="M50 62c0-21 23-36 52-36s48 13 48 32-19 36-48 36-52-11-52-32z" fill="#F1EAE1"/>'
+   +'<path d="M59 62c0-16 20-29 44-29s40 11 40 27-16 29-40 29-44-11-44-27z" fill="#A83744"/>'
+   +'<path d="M84 48c9 5 11 13 7 22M104 44c11 6 13 17 6 28M122 54c7 6 7 15 0 21" stroke="#F1EAE1" stroke-width="4" stroke-linecap="round" fill="none"/>',
+ tenderloin:'<path d="M38 78c15-23 46-42 82-42 23 0 40 9 44 20 4 12-9 23-27 27-32 7-67 12-99-5z" fill="#8E1C2B"/>'
+   +'<path d="M68 64c17-9 36-13 51-11M74 78c15-6 30-8 43-7" stroke="#C9636E" stroke-width="6" stroke-linecap="round" fill="none"/>',
+ cubes:'<g fill="#A83744"><rect x="54" y="50" width="28" height="26" rx="8" transform="rotate(-8 68 63)"/>'
+   +'<rect x="86" y="36" width="28" height="26" rx="8" transform="rotate(6 100 49)"/>'
+   +'<rect x="118" y="52" width="28" height="26" rx="8" transform="rotate(-4 132 65)"/>'
+   +'<rect x="70" y="76" width="28" height="26" rx="8" transform="rotate(5 84 89)"/>'
+   +'<rect x="104" y="78" width="28" height="26" rx="8" transform="rotate(-10 118 91)"/></g>',
+ mince:'<path d="M50 88c3-22 23-38 50-38s47 16 50 38z" fill="#8E1C2B"/>'
+   +'<g stroke="#C9636E" stroke-width="5" stroke-linecap="round" fill="none">'
+   +'<path d="M64 80c6-9 15-9 21 0M92 76c6-9 15-9 21 0M120 82c6-9 15-9 21 0M78 64c6-9 15-9 21 0M106 60c6-9 15-9 21 0"/></g>',
+ kebab:'<g stroke="#D8CFC1" stroke-width="5" stroke-linecap="round"><path d="M36 44h130M36 86h130"/></g>'
+   +'<g fill="#A83744"><rect x="60" y="31" width="24" height="26" rx="8"/><rect x="90" y="31" width="24" height="26" rx="8"/>'
+   +'<rect x="120" y="31" width="24" height="26" rx="8"/><rect x="60" y="73" width="24" height="26" rx="8"/>'
+   +'<rect x="90" y="73" width="24" height="26" rx="8"/><rect x="120" y="73" width="24" height="26" rx="8"/></g>',
+ sheep:'<g fill="#F1EAE1"><circle cx="80" cy="60" r="19"/><circle cx="104" cy="51" r="21"/><circle cx="128" cy="60" r="18"/>'
+   +'<rect x="74" y="54" width="60" height="32" rx="16"/></g>'
+   +'<g stroke="#3A322C" stroke-width="6" stroke-linecap="round"><path d="M88 86v16M122 86v16"/></g>'
+   +'<ellipse cx="150" cy="55" rx="14" ry="12" fill="#3A322C"/><circle cx="156" cy="51" r="2.6" fill="#F1EAE1"/>'
+   +'<path d="M139 46c-5-7-2-13 5-13" stroke="#3A322C" stroke-width="5" fill="none" stroke-linecap="round"/>',
+ goat:'<ellipse cx="96" cy="64" rx="36" ry="21" fill="#D8CFC1"/>'
+   +'<g stroke="#3A322C" stroke-width="6" stroke-linecap="round"><path d="M80 84v18M112 84v18"/></g>'
+   +'<ellipse cx="140" cy="52" rx="15" ry="12" fill="#3A322C"/>'
+   +'<path d="M133 41c-7-9-5-18 3-20M147 41c7-9 5-18-3-20" stroke="#3A322C" stroke-width="5" fill="none" stroke-linecap="round"/>'
+   +'<path d="M145 63c2 7-1 11-5 13" stroke="#3A322C" stroke-width="4" fill="none" stroke-linecap="round"/>'
+   +'<circle cx="147" cy="49" r="2.4" fill="#F1EAE1"/>',
+ camel:'<path d="M40 100V78c0-10 5-18 13-23 4-14 13-22 24-22 8 0 14 4 18 11 6-11 17-18 29-18 9 0 17 3 22 9V28a10 10 0 0 1 20 0v18c9 8 13 19 13 31v23h-13V74c0-6-2-12-6-16v42h-13V60c-6 4-13 6-20 6-9 0-17-3-24-8v42H90V72c-4 3-9 5-14 5-7 0-14-3-19-8v31z" fill="#3A322C"/>'
+   +'<circle cx="152" cy="30" r="2.6" fill="#F1EAE1"/>',
+ chickenWhole:'<ellipse cx="94" cy="70" rx="42" ry="30" fill="#F1EAE1"/>'
+   +'<path d="M56 62c11-16 29-25 48-25" stroke="#E3D8C8" stroke-width="8" fill="none" stroke-linecap="round"/>'
+   +'<path d="M132 50c9-7 20-4 24 5-9 2-15 7-19 13z" fill="#C9636E"/>'
+   +'<rect x="60" y="86" width="24" height="9" rx="4.5" fill="#E3D8C8"/><rect x="104" y="86" width="24" height="9" rx="4.5" fill="#E3D8C8"/>',
+ chickenBreast:'<path d="M52 76c-7-18 6-35 26-37 18-2 29 9 29 22 0 15-13 26-31 26-11 0-20-4-24-11z" fill="#F1EAE1"/>'
+   +'<path d="M100 84c-7-18 6-35 26-37 18-2 29 9 29 22 0 15-13 26-31 26-11 0-20-4-24-11z" fill="#E9DECF"/>'
+   +'<path d="M70 62c8-6 17-8 25-6M118 70c8-6 17-8 25-6" stroke="#DCCDB8" stroke-width="4" stroke-linecap="round" fill="none"/>',
+ turkey:'<ellipse cx="92" cy="72" rx="44" ry="31" fill="#EFE3D3"/>'
+   +'<g fill="#D8CFC1"><path d="M140 40c14 6 20 22 15 36l-19-12z"/><path d="M124 32c13 2 22 15 21 29l-20-9z"/></g>'
+   +'<path d="M50 64c11-17 30-27 50-27" stroke="#E3D8C8" stroke-width="8" fill="none" stroke-linecap="round"/>'
+   +'<path d="M130 60c9-6 19-3 23 6-9 2-15 7-19 13z" fill="#C9636E"/>',
+ box:'<path d="M54 52l46-19 46 19v36l-46 19-46-19z" fill="#D8CFC1"/>'
+   +'<path d="M54 52l46 19 46-19M100 71v36" stroke="#B7AC9A" stroke-width="4" fill="none"/>'
+   +'<rect x="84" y="26" width="32" height="15" rx="5" fill="#8E1C2B"/>'
+   +'<rect x="66" y="60" width="22" height="16" rx="5" fill="#A83744" opacity=".85"/>',
+ platter:'<ellipse cx="100" cy="96" rx="64" ry="10" fill="#D8CFC1"/>'
+   +'<path d="M40 92a60 42 0 0 1 120 0z" fill="#F1EAE1"/>'
+   +'<path d="M60 92a40 27 0 0 1 80 0z" fill="#E9DECF"/>'
+   +'<ellipse cx="100" cy="70" rx="24" ry="13" fill="#A83744"/>'
+   +'<ellipse cx="88" cy="66" rx="8" ry="5" fill="#C9636E"/>',
+ gift:'<rect x="54" y="52" width="92" height="50" rx="9" fill="#D8CFC1"/>'
+   +'<rect x="54" y="42" width="92" height="17" rx="7" fill="#C4BAA9"/>'
+   +'<rect x="93" y="42" width="14" height="60" fill="#8E1C2B"/>'
+   +'<path d="M100 42c-11 0-20-5-20-12a10 10 0 0 1 20 0c0 7 9 12 20 12" fill="none" stroke="#8E1C2B" stroke-width="7"/>',
+ mosque:'<path d="M50 100V68a50 50 0 0 1 100 0v32z" fill="#D8CFC1"/>'
+   +'<path d="M100 20c9 9 9 18 0 24-9-6-9-15 0-24z" fill="#8E1C2B"/>'
+   +'<rect x="85" y="72" width="30" height="28" rx="15" fill="#F1EAE1"/>'
+   +'<rect x="36" y="100" width="128" height="7" rx="3.5" fill="#C4BAA9"/>',
+ hands:'<path d="M56 100V76a11 11 0 0 1 11-11h15l17 13h21a9 9 0 0 1 0 18h-13" fill="none" stroke="#3A322C" stroke-width="7" stroke-linecap="round"/>'
+   +'<path d="M114 40c9-9 24-2 24 11 0 11-14 21-24 27-10-6-24-16-24-27 0-13 15-20 24-11z" fill="#8E1C2B"/>',
+ tag:'<path d="M150 66 106 110a11 11 0 0 1-15 0l-33-33a11 11 0 0 1-3-8V30a10 10 0 0 1 10-10h40c3 0 6 1 8 3l37 38a9 9 0 0 1 0 12z" fill="#8E1C2B"/>'
+   +'<circle cx="76" cy="42" r="8" fill="#F1EAE1"/>'
+   +'<path d="M84 84l28-28" stroke="#F1EAE1" stroke-width="7" stroke-linecap="round"/>'
+   +'<circle cx="86" cy="58" r="5.5" fill="#F1EAE1"/><circle cx="110" cy="82" r="5.5" fill="#F1EAE1"/>'
+};
+var ARTOF={31:'shoulder',32:'chickenWhole',
+ 1:'sheep',2:'sheep',3:'sheep',4:'sheep',5:'goat',6:'goat',
+ 7:'sheep',8:'gift',9:'sheep',10:'mosque',11:'hands',12:'sheep',
+ 13:'platter',14:'platter',15:'chops',16:'leg',17:'shoulder',
+ 18:'tenderloin',19:'steak',20:'cubes',21:'camel',22:'camel',
+ 23:'chickenWhole',24:'chickenBreast',25:'turkey',
+ 26:'mince',27:'mince',28:'kebab',29:'box',30:'cubes'};
+var ARTBG=['#EDE6DB','#E8E0D3','#F0EAE0'];
+function photoOf(i){var L2=[IMG.h1,IMG.h2,IMG.h3,IMG.h4,IMG.origin];return L2[Math.abs(i)%L2.length];}
+function artHTML(p,cls){
+  var k=ARTOF[p.id]||'steak', seed=p.id|0;
+  var bg=ARTBG[seed%3], flip=(seed%2)?' transform="translate(200,0) scale(-1,1)"':'';
+  return '<svg class="art '+(cls||'')+'" viewBox="0 0 200 125" preserveAspectRatio="xMidYMid slice" aria-hidden="true">'
+   +'<rect width="200" height="125" fill="'+bg+'"/>'
+   +'<circle cx="'+(40+(seed*23)%120)+'" cy="18" r="52" fill="#FFFFFF" opacity=".38"/>'
+   +'<g'+flip+'>'+ART[k]+'</g></svg>'
+   +'<img class="ph-img" src="'+(p.img||photoOf(seed))+'" alt="" loading="lazy" decoding="async" onerror="this.remove()">';
+}
+
+var main=document.getElementById('main'), orgEl=document.getElementById('filters');
 var veil=document.getElementById('veil'), psheet=document.getElementById('psheet'), csheet=document.getElementById('csheet');
-var ORG={}, S={}, A=0, lock=0, openP=null, cartOpen=false;
+var ORG={}, STT={}, ANM={}, S={}, A=0, lock=0, openP=null, cartOpen=false;
 var ADDR=[{id:1,lbl:'lblHome',zone:'25',street:'840',type:'house',bldg:'12'},
           {id:2,lbl:'lblWork',zone:'63',street:'230',type:'office',floor:'4',unit:'12'}];
 var addrId=null, addrForm=false, aid=3;
@@ -620,7 +762,7 @@ function unitHTML(k,store,kind){
   return '<div class="uitem'+(on?' on':'')+'" data-uk="'+k+'" data-us="'+kind+'">'
    +'<div class="uhead">'
    +'<span class="chk'+(on?' on':'')+'" data-act="ptick" data-s="'+kind+'" data-k="'+k+'"><i class="ti ti-check"></i></span>'
-   +'<span class="uth"><img src="'+prodImg(v.p)+'" alt="" width="44" height="44" loading="lazy" decoding="async" onerror="this.remove()"></span>'
+   +'<span class="uth">'+artHTML(v.p)+'</span>'
    +'<span style="flex:1;min-width:0"><span class="unm">'+nm(v.p)+'</span>'
    +'<span class="uopt">'+optLabel(v.opt)+'</span></span>'+del+'</div>'
    +badgeRow
@@ -740,14 +882,31 @@ function nm(x){return L==='ar'?x.ar:x.en;}
 function orgById(id){for(var i=0;i<ORIGINS.length;i++)if(ORIGINS[i].id===id)return ORIGINS[i];return{ar:"",en:"",f:""};}
 function catById(id){for(var i=0;i<CATS.length;i++)if(CATS[i].id===id)return CATS[i];}
 function prodById(id){for(var i=0;i<P.length;i++)if(P[i].id==id)return P[i];}
-function anyOrg(){for(var k in ORG)if(ORG[k])return true;return false;}
-function visible(){return P.filter(function(p){return !anyOrg()||ORG[p.o];});}
+function anySel(o){for(var k in o)if(o[k])return true;return false;}
+function anyOrg(){return anySel(ORG)||anySel(STT)||anySel(ANM);}
+function visible(){
+  return P.filter(function(p){
+    if(anySel(ORG)&&!ORG[p.o])return false;
+    if(anySel(STT)&&!STT[p.sv])return false;
+    if(anySel(ANM)&&!ANM[p.an])return false;
+    return true;
+  });
+}
 function optLabel(o){return o.w!=null?((o.w%1?o.w.toFixed(1):o.w)+' '+t().kg):nm(o);}
 function subOf(p){return p.rate?t().perkg(p.rate):(L==='ar'?p.sar:p.sen);}
 function tagOf(p){return p.tar?(L==='ar'?p.tar:p.ten):null;}
 function catFull(c){return L==='ar'?c.arF:c.enF;}
 function prodImg(p){return p.img||IMG[catById(p.c).im];}
 function prepSet(p){return PREP[catById(p.c).prep];}
+function stateById(id){for(var i=0;i<STATES.length;i++)if(STATES[i].id===id)return STATES[i];return STATES[0];}
+function animalById(id){for(var i=0;i<ANIMALS.length;i++)if(ANIMALS[i].id===id)return ANIMALS[i];return ANIMALS[0];}
+function tagsHTML(p){
+  var o=orgById(p.o), st=stateById(p.sv), an=animalById(p.an);
+  return '<div class="ptags">'
+   +'<span class="ptag"><span class="fl">'+o.f+'</span>'+nm(o)+'</span>'
+   +'<span class="ptag"><i class="ti '+st.ic+'"></i>'+nm(st)+'</span>'
+   +'<span class="ptag">'+nm(an)+'</span></div>';
+}
 function minPrice(p){return p.opts.reduce(function(a,x){return Math.min(a,x.p);},1/0);}
 function keysOf(pid){var a=[];for(var k in S)if(k.split('|')[0]==pid)a.push(k);
   return a.sort(function(x,y){return (+x.split('|')[1])-(+y.split('|')[1]);});}
@@ -779,9 +938,6 @@ function setLang(x){
   document.getElementById('bn').textContent=t().brand;
   document.getElementById('bs').textContent=t().tag;
   document.getElementById('langBtn').textContent=t().other;
-  document.getElementById('hEye').textContent=t().hEye;
-  document.getElementById('hTitle').textContent=t().hTitle;
-  document.getElementById('hSub').textContent=t().hSub;
   document.getElementById('fTitle').textContent=t().fTitle;
   document.getElementById('fAddr').textContent=t().fAddr;
   document.getElementById('fPhone').textContent=t().fPhone;
@@ -800,35 +956,17 @@ function setLang(x){
     return '<a class="flink" href="'+x[2]+'"'+(ext?' target="_blank" rel="noopener"':'')
       +'><i class="ti '+x[0]+'"></i><span>'+x[1]+'</span></a>';
   }).join('');
-  document.getElementById('trust').innerHTML=[['ti-certificate','t1'],['ti-package','t2'],['ti-scale','t3']].map(function(a){
-    return '<div class="tr"><i class="ti '+a[0]+'"></i>'+t()[a[1]]+'</div>';}).join('');
-  buildOrigins(); buildRail(); render();
+  buildOrigins(); render();
   if(openP)renderProduct(); if(cartOpen)renderCart(); if(profOpen)renderProfile(); if(docOpen)renderDoc();
 }
 document.getElementById('logoImg').src=IMG.logo;
-document.getElementById('heroImg').src=IMG.h1;
 document.getElementById('payVisa').src=IMG.visa;
 document.getElementById('payMc').src=IMG.mc;
 document.getElementById('langBtn').onclick=function(){setLang(L==='ar'?'en':'ar');};
 
-function buildOrigins(){
-  orgEl.innerHTML='';
-  var all=document.createElement('div'); all.className='org'; all.id='org-all';
-  all.innerHTML='<b>'+t().all+'</b><span class="n">'+P.length+'</span>';
-  all.onclick=function(){ORG={};paintOrg();render();jumpFirst();};
-  orgEl.appendChild(all);
-  ORIGINS.forEach(function(o){
-    var n=P.filter(function(p){return p.o===o.id;}).length;
-    var e=document.createElement('div'); e.className='org'; e.dataset.o=o.id;
-    e.innerHTML='<span class="fl">'+o.f+'</span><b>'+nm(o)+'</b><span class="n">'+n+'</span>';
-    e.onclick=function(){ORG[o.id]=!ORG[o.id];if(!ORG[o.id])delete ORG[o.id];paintOrg();render();jumpFirst();};
-    orgEl.appendChild(e);
-  });
-  paintOrg();
-}
 function stickyH(){
-  var o=document.getElementById('origins');
-  return (o?o.offsetHeight:50);
+  var tb=document.getElementById('topbar'), bb=document.getElementById('brandbar');
+  return Math.max(40,(tb?tb.offsetHeight:120)-(bb?bb.offsetHeight:0));
 }
 function sectionTop(wrap){
   var head=wrap.querySelector('.sec')||wrap;
@@ -837,83 +975,79 @@ function sectionTop(wrap){
 }
 function firstLive(){
   var vis=visible(), idx=-1;
-  CATS.forEach(function(c,i){
-    if(idx<0&&vis.some(function(p){return p.c===c.id;}))idx=i;
-  });
+  CATS.forEach(function(c,i){ if(idx<0&&vis.some(function(p){return p.c===c.id;}))idx=i; });
   return idx;
 }
-function jumpFirst(){
-  if(!anyOrg()){A=firstLive()<0?0:firstLive();paintRail();
-    window.scrollTo({top:0,behavior:'smooth'});return;}
-  var i=firstLive();
-  if(i<0){window.scrollTo({top:0,behavior:'smooth'});return;}
-  A=i; paintRail(); lock=Date.now();
-  var r=railEl.children[A]; if(r&&r.scrollIntoView)r.scrollIntoView({block:'nearest'});
-  requestAnimationFrame(function(){requestAnimationFrame(function(){
-    var h=document.getElementById('sec-'+CATS[A].id); if(!h)return;
-    lock=Date.now();
-    window.scrollTo({top:sectionTop(h),behavior:'smooth'});
-    setTimeout(function(){A=i;paintRail();lock=Date.now();},650);
-  });});
+function jumpFirst(){window.scrollTo({top:0,behavior:'smooth'});}
+function avatarFlagImg(x){
+  return '<span class="cav flagav"><span class="femoji">'+x.f+'</span>'
+   +'<img src="https://flagcdn.com/w160/'+x.cc+'.png" alt="" loading="lazy" decoding="async" onerror="this.remove()"></span>'
+   +'<span class="scrim"></span>';
+}
+function avatarPhoto(seed,artKey){
+  return '<span class="cav">'
+   +(artKey?'<svg viewBox="0 0 200 125" preserveAspectRatio="xMidYMid slice" aria-hidden="true">'
+     +'<rect width="200" height="125" fill="#EDE6DB"/>'+ART[artKey]+'</svg>':'')
+   +'<img src="'+photoOf(seed)+'" alt="" loading="lazy" decoding="async" onerror="this.remove()"></span>'
+   +'<span class="scrim"></span>';
+}
+var ROWS=[
+ {k:'state',sel:function(){return STT;},items:function(){return STATES;}},
+ {k:'animal',sel:function(){return ANM;},items:function(){return ANIMALS;}},
+ {k:'origin',sel:function(){return ORG;},items:function(){return ORIGINS;},flag:true}
+];
+function buildOrigins(){
+  orgEl.innerHTML='';
+  ROWS.forEach(function(row,ri){
+    var r=document.createElement('div'); r.className='crow';
+    row.items().forEach(function(x,xi){
+      var e=document.createElement('div'); e.className='cchip';
+      e.dataset.act='fpick'; e.dataset.r=ri; e.dataset.v=x.id;
+      e.innerHTML=(row.flag?avatarFlagImg(x):avatarPhoto(ri*5+xi,x.art||null))
+        +'<span class="clab">'+nm(x)+'</span>';
+      r.appendChild(e);
+    });
+    orgEl.appendChild(r);
+  });
+  paintOrg();
 }
 function paintOrg(){
-  document.getElementById('org-all').classList.toggle('on',!anyOrg());
-  [].forEach.call(orgEl.querySelectorAll('.org[data-o]'),function(e){e.classList.toggle('on',!!ORG[e.dataset.o]);});
-}
-
-function buildRail(){
-  railEl.innerHTML='';
-  CATS.forEach(function(c,i){
-    var e=document.createElement('div'); e.className='tab'; e.dataset.i=i;
-    e.innerHTML=ico(c.id,'ic')+'<span>'+nm(c)+'</span>';
-    railEl.appendChild(e);
+  [].forEach.call(orgEl.querySelectorAll('.cchip'),function(e){
+    var row=ROWS[+e.dataset.r];
+    e.classList.toggle('on',!!row.sel()[e.dataset.v]);
   });
 }
-var rDown=false,rY=0,rMoved=0;
-railEl.addEventListener('pointerdown',function(e){rDown=true;rY=e.clientY;rMoved=0;});
-railEl.addEventListener('pointermove',function(e){if(rDown)rMoved=Math.max(rMoved,Math.abs(e.clientY-rY));});
-railEl.addEventListener('pointerup',function(){rDown=false;});
-railEl.addEventListener('pointercancel',function(){rDown=false;rMoved=99;});
-railEl.addEventListener('click',function(e){
-  if(rMoved>8){rMoved=0;return;}
-  var x=e.target.closest('.tab'); if(!x||x.classList.contains('off'))return;
-  goto(+x.dataset.i);
-});
+var CATART={deal:'tag',carcass:'sheep',aqiqa:'gift',udhiya:'mosque',sadaqa:'hands',walima:'platter',
+  lamb:'chops',beef:'steak',camel:'camel',bird:'chickenWhole',mince:'mince',supply:'box'};
+function catAvatar(c){
+  return '<svg viewBox="0 0 200 125" preserveAspectRatio="xMidYMid slice" aria-hidden="true">'
+   +'<rect width="200" height="125" fill="#EDE6DB"/>'
+   +'<circle cx="120" cy="16" r="52" fill="#FFFFFF" opacity=".38"/>'
+   +ART[CATART[c.id]||'steak']+'</svg>';
+}
 function goto(i){
   var h=document.getElementById('sec-'+CATS[i].id); if(!h)return;
-  lock=Date.now(); A=i; paintRail();
+  lock=Date.now(); A=i; 
   window.scrollTo({top:sectionTop(h),behavior:'smooth'});
 }
-function paintRail(){
+function paintRailUnused(){
   var vis=visible();
-  [].forEach.call(railEl.children,function(e,i){
-    var has=vis.some(function(p){return p.c===CATS[i].id;});
+  [].forEach.call(railEl.querySelectorAll('.cchip[data-i]'),function(e){
+    var i=+e.dataset.i, has=vis.some(function(p){return p.c===CATS[i].id;});
     e.classList.toggle('off',!has); e.classList.toggle('on',i===A&&has);
   });
 }
 
 function render(){
   var vis=visible(); main.innerHTML='';
-  CATS.forEach(function(c){
-    var items=vis.filter(function(p){return p.c===c.id;});
-    if(!items.length)return;
-    var wrap=document.createElement('section'); wrap.className='secwrap'; wrap.id='sec-'+c.id;
-    var h=document.createElement('div'); h.className='sec';
-    h.innerHTML='<div class="logo">'
-      +ico(c.id,'ic')+'</div>'
-      +'<div><div class="ttl">'+catFull(c)+'</div></div><div class="ln"></div>';
-    wrap.appendChild(h);
+  if(!vis.length){
+    var e=document.createElement('div'); e.className='empty'; e.textContent=t().noProd; main.appendChild(e);
+  } else {
     var g=document.createElement('div'); g.className='grid';
-    items.forEach(function(p){g.appendChild(card(p));});
-    wrap.appendChild(g); main.appendChild(wrap);
-  });
-  if(!vis.length){var e=document.createElement('div');e.className='empty';e.textContent=t().noProd;main.appendChild(e);}
-  var live=[];
-  CATS.forEach(function(c,i){if(vis.some(function(p){return p.c===c.id;}))live.push(i);});
-  if(live.length&&live.indexOf(A)<0)A=live[0];
-  paintRail(); P.forEach(paintCard); sumCart();
-  var first=railEl.children[A];
-  if(first&&first.scrollIntoView)first.scrollIntoView({block:'nearest'});
+    vis.forEach(function(p){g.appendChild(card(p));});
+    main.appendChild(g);
+  }
+  P.forEach(paintCard); sumCart();
 }
 
 function card(p){
@@ -921,14 +1055,14 @@ function card(p){
   var d=document.createElement('div'); d.className='pcard'; d.id='card-'+p.id;
   d.dataset.act='open'; d.dataset.p=p.id;
   d.innerHTML='<div class="pimg">'+ico(c.id,'ic')
-   +'<img src="'+prodImg(p)+'" alt="" loading="lazy" decoding="async" onerror="this.remove()">'
+   +artHTML(p)
    +(tag?'<span class="tg">'+tag+'</span>':'')
    +'<span class="fav2" id="fv-'+p.id+'" data-act="cfav" data-p="'+p.id+'"><i class="ti ti-heart"></i></span>'
    +'<span class="cnt2" id="cn-'+p.id+'" style="display:none"></span></div>'
    +'<div class="pbody"><div class="pnm">'+nm(p)+'</div>'
+   +tagsHTML(p)
    +'<div class="prow">'
-   +'<div class="pmeta"><span>'+o.f+' '+nm(o)+'</span>'
-   +'<span class="st"><i class="ti ti-star-filled"></i>'+(p.r||4.5).toFixed(1)+'</span></div>'
+   +'<div class="pmeta"><span class="st"><i class="ti ti-star-filled"></i>'+(p.r||4.5).toFixed(1)+'</span></div>'
    +'<div class="pprice"><span class="lb" id="pl-'+p.id+'">'+t().from+'</span>'
    +'<span class="v" id="pv-'+p.id+'">'+money(minPrice(p))+'</span> <span class="c">'+t().cur+'</span></div>'
    +'</div></div>';
@@ -966,7 +1100,8 @@ function renderProduct(){
    +'<span class="bk" data-act="closep"><i class="ti ti-x"></i></span></div>'
    +'<div class="dhero"><img src="'+prodImg(p)+'" alt="" onerror="this.remove()"></div>'
    +'<div class="dbody"><div class="dnm">'+nm(p)+'</div>'
-   +'<div class="dmeta"><span class="flagchip">'+o.f+' '+nm(o)+'</span><span>'+subOf(p)+'</span>'
+   +tagsHTML(p)
+   +'<div class="dmeta"><span>'+subOf(p)+'</span>'
    +(tag?'<span class="tagp">'+tag+'</span>':'')
    +'<span class="rate"><i class="ti ti-star-filled"></i>'+(p.r||4.5).toFixed(1)+'</span></div>'
    +'<p class="blk">'+t().pickQty+'</p><div class="opts">'+opts+'</div>'
@@ -1029,7 +1164,7 @@ function renderCart(){
       var p=prodById(pid), o=orgById(p.o), lines='';
       keysOf(pid).forEach(function(k){if(!S[k].src)lines+=lineHTML(k);});
       h+='<div class="gcard"><div class="ghead" data-act="open" data-p="'+p.id+'">'
-       +'<div class="gth"><img src="'+prodImg(p)+'" alt="" width="52" height="52" loading="lazy" decoding="async" onerror="this.remove()"></div>'
+       +'<div class="gth">'+artHTML(p)+'</div>'
        +'<div style="flex:1;min-width:0"><div class="gnm">'+nm(p)+'</div>'
        +'<div class="gsub">'+o.f+' '+nm(o)+' · '+subOf(p)+'</div></div>'
        +'<i class="ti ti-chevron-left" style="color:var(--faint)"></i></div>'
@@ -1238,6 +1373,11 @@ document.addEventListener('click',function(e){
     },260);
     return;
   }
+  if(a==='fpick'){
+    var row=ROWS[+el.dataset.r], sel=row.sel(), v=el.dataset.v;
+    if(sel[v])delete sel[v]; else sel[v]=true;
+    paintOrg(); render(); jumpFirst(); return;
+  }
   if(a==='doc'){openDoc(el.dataset.d);return;}
   if(a==='closed'){closeDoc();return;}
   if(a==='faqq'){var kk=docOpen+el.dataset.i;faqOpen[kk]=!faqOpen[kk];renderDoc();return;}
@@ -1327,10 +1467,13 @@ var topBar=document.getElementById('topbar'), brandBar=document.getElementById('
     orowEl=document.getElementById('origins'), BH=0, barRaf=null;
 function measureBar(){BH=brandBar.offsetHeight;}
 window.addEventListener('resize',function(){measureBar();syncBar();});
+var catsEl=document.getElementById('filters'), compact=false;
 function syncBar(){
   if(!BH)measureBar();
-  var o=Math.min(BH,Math.max(0,window.pageYOffset));
+  var y=Math.max(0,window.pageYOffset), o=Math.min(BH,y);
   topBar.style.transform='translate3d(0,'+(-o)+'px,0)';
+  if(!compact&&y>BH+96){compact=true;catsEl.classList.add('compact');}
+  else if(compact&&y<BH+18){compact=false;catsEl.classList.remove('compact');}
 }
 window.addEventListener('scroll',function(){
   if(barRaf)return;
@@ -1347,12 +1490,9 @@ function doSpy(){
     if(h.getBoundingClientRect().top<=probe)c=i;
   });
   if(c<0){CATS.forEach(function(cat,i){if(c<0&&document.getElementById('sec-'+cat.id))c=i;});}
-  if(c!==A){A=c;paintRail();var x=railEl.children[A];if(x&&x.scrollIntoView)x.scrollIntoView({block:'nearest',behavior:'smooth'});}
+  if(c!==A){A=c;}
 }
-window.addEventListener('scroll',function(){
-  if(spyRaf)return;
-  spyRaf=requestAnimationFrame(function(){spyRaf=null;doSpy();});
-},{passive:true});
+
 
 setLang('ar'); measureBar(); syncBar();
 })();
